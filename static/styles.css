@@ -31,8 +31,7 @@ h2
     font-size: 140px;
     line-height: 0.6em;
     font-weight: 900;
-    text-shadow: 5px 0px 2px rgba(255,255,255,0.3),
-                -5px 0px 2px rgba(0,0,0,0.5);
+    text-shadow: 5px 0px 2px rgba(255,255,255,0.3);
 }
 h2 span
 {
