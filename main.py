@@ -18,7 +18,8 @@ def val_update():
     moscow = timezone('Europe/Moscow')
     moscow_time = datetime.now(moscow)
     msc_date = moscow_time.strftime('%d.%m.%Y')
-    msc_time = moscow_time.strftime('%H:%M:%S')
+    msc_time = moscow_time.strftime('%H:%M')
+    # msc_time = moscow_time.strftime('%H:%M:%S')
     d = {'date': msc_date, 'time': msc_time}
     return d
 
@@ -34,8 +35,7 @@ async def read_time(request: Request, id: str):
 
 @app.get("/items", response_class=HTMLResponse)
 async def get_clock_data(request: Request):
-    # d = val_update()
+    d = val_update()
     # clock = Clock(date=d['date'], time=d['time'])
-    # return templates.TemplateResponse("index.html", {"request": request, 'date': d['date'], 'time': d['time']})
-    return templates.TemplateResponse("index.html", {"request": request})
+    return templates.TemplateResponse("index.html", {"request": request, 'date': d['date'], 'time': d['time']})
 

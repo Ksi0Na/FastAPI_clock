@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Time with background animation</title>
-    <link href="../static/styles.css" rel="stylesheet">
+    <title>My clock</title>
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+<!--    <link href="/static/styles.css" rel="stylesheet">-->
 </head>
 <body>
     <div class="container">
         <div class="rectangle">
-            <h2><span>11.03.2023</span><br>18:36</h2>
-<!--        <h2><span>My first video on</span><br>AnimeJs</h2>-->
-<!--        <h2><span>{{ date }}</span><br>{{ time }}</h2>-->
+<!--            <h2><span>11.03.2023</span><br>18:36</h2>-->
+            <h2><span>{{date}}</span><br>{{time}}</h2>
         </div>
     </div>
-    <script src="../js/anime.min.js"></script>
+    <script type="text/javascript" src="/static/js/anime.min.js"></script>
     <script>
         const container = document.querySelector('.container')
         for (let i = 0; i <= 100; i++){
