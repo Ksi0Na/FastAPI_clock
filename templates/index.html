@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <title>My clock</title>
     <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
-<!--    <link href="/static/styles.css" rel="stylesheet">-->
+<!--    <link href="../static/styles.css" rel="stylesheet">-->
 </head>
 <body>
     <div class="container">
         <div class="rectangle">
-<!--            <h2><span>11.03.2023</span><br>18:36</h2>-->
+<!--            <h2><span>12.03.2023</span><br>14:10</h2>-->
             <h2><span>{{date}}</span><br>{{time}}</h2>
         </div>
     </div>
+<!--    <script src="../static/js/anime.min.js"></script>-->
     <script type="text/javascript" src="/static/js/anime.min.js"></script>
     <script>
         const container = document.querySelector('.container')
-        for (let i = 0; i <= 100; i++){
+        for (let i = 0; i <= 10; i++){
             const blocks = document.createElement('div');
             blocks.classList.add('block');
             container.appendChild(blocks);
